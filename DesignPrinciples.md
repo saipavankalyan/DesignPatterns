@@ -12,4 +12,4 @@
    - No variable should hold a reference to a concrete class
    - No class should derive from a concrete class
    - No method should override an implemented method of any of its base classes
-7. Principle of least knowledge
+7. Principle of least knowledge - talk only to your immediate friends
