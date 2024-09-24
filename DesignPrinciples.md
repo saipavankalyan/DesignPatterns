@@ -13,3 +13,4 @@
    - No class should derive from a concrete class
    - No method should override an implemented method of any of its base classes
 7. Principle of least knowledge - talk only to your immediate friends
+8. Don't call us, we'll call you - Hollywood Principle
