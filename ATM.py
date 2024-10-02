@@ -242,15 +242,15 @@ class OneCashWithdrawProcessor(CashWithdrawProcessor):
         if remaining != 0:
             super().withdraw(atm, remaining)
     
-
-class ATM:
+class __ATM(type):
     __instance = None
 
-    def __new__(cls):
+    def __new__(cls, name, bases, dct):
         if cls.__instance is None:
-            cls.__instance = super(ATM, cls).__new__(cls)
+            cls.__instance = type.__new__(cls, name, bases, dct)
         return cls.__instance
-    
+
+class ATM(metaclass=__ATM):
     def __init__(self):
         self.__hundred_count = 0
         self.__twenty_count = 0
